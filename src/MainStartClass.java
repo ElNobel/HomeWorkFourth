@@ -17,6 +17,5 @@ public class MainStartClass {
         OverlapArrays.searchOverlap(randFirstArray,randSecondArray);
         OverlapArrays.printOverlapArray();
 
-        // System.out.println(CharInString.sumOfCharInString("abaasb", 'a') == 3);
     }
 }
