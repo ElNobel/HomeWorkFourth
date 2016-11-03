@@ -1,21 +1,23 @@
 
 public class MainStartClass {
     public static void main(String[] args) {
-        double[] firstArray = {2.1,2.2,2.3,2.6,2.9,3.2,3.1};
-        double[] secondArray= {2.1,2.4,2.5,2.6,3.1,2.9};
+        double[] firstArray = {2.1,2.2};
+        double[] secondArray= {2.1,2.2};
+        double[] resultArray = OverlapArrays.intersection(firstArray,secondArray);
+
+        OverlapArrays.printIntersection(resultArray);
+        System.out.println(OverlapArrays.testIntersection(firstArray,secondArray));
+
+
         double[] randFirstArray = new double[10];
         double[] randSecondArray = new double[10];
 
-        OverlapArrays.searchOverlap(firstArray,secondArray);
-        OverlapArrays.printOverlapArray();
+        OverlapArrays.doRandom(randFirstArray, 0, 20);
+        OverlapArrays.doRandom(randSecondArray, 0, 15);
 
-        System.out.println();
-        OverlapArrays.clearHashOverlap();
+        double[] resultRandArray = OverlapArrays.intersection(randFirstArray,randSecondArray);
 
-        OverlapArrays.doRandomArrays(randFirstArray,0,30);
-        OverlapArrays.doRandomArrays(randSecondArray,10,50);
-        OverlapArrays.searchOverlap(randFirstArray,randSecondArray);
-        OverlapArrays.printOverlapArray();
+        OverlapArrays.printIntersection(resultRandArray);
 
     }
 }
